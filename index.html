@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapo Foods | Restaurant Management Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="nav-header">
+        <a href="#" class="logo">
+            <div class="logo-icon"></div>
+            Sapo Foods
+        </a>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#pricing">Pricing</a>
+        </nav>
+        <div style="display: flex; gap: 1rem;">
+            <a href="#contact" class="btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <div class="badge">
+                New: Real-time Kitchen Analytics v2.0
+            </div>
+            <h1>The modern operating system for <span>restaurants.</span></h1>
+            <p>Sapo Foods provides a clean, powerful dashboard to manage your entire restaurant—from intelligent QR ordering to real-time staff and revenue analytics.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn-primary btn-large">Book a Demo</a>
+                <a href="#features" class="btn-secondary btn-large">Explore Platform</a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div id="qr-stand-container" style="width: 100%; height: 600px; background: transparent; position: relative; border-radius: 24px; overflow: hidden; cursor: grab; display: flex; justify-content: center; align-items: center;">
+                <canvas id="qrCanvas" style="display: block; width: 100%; height: 100%; outline: none;"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase (Features) -->
+    <section id="features" class="container">
+        <h2>Enterprise-Grade Tooling</h2>
+        <p class="section-subtitle">Everything you need to automate your front and back of house, delivered in a beautifully structured interface.</p>
+        
+        <div class="features-grid">
+            <div class="ui-card">
+                <div class="feature-icon">QR</div>
+                <h3>Intelligent Menus</h3>
+                <p>Digital, dynamic menus that adapt to inventory. Update items, modifiers, and pricing instantly without reprinting.</p>
+            </div>
+            <div class="ui-card">
+                <div class="feature-icon">⌘</div>
+                <h3>Live Floor Plan</h3>
+                <p>Real-time bird's eye view of your restaurant. Know exactly which tables are ordering, waiting, or ready to pay.</p>
+            </div>
+            <div class="ui-card">
+                <div class="feature-icon">▤</div>
+                <h3>Revenue Analytics</h3>
+                <p>Monitor your daily sales, peak hours, and top-selling items through our comprehensive reporting suite.</p>
+            </div>
+            <div class="ui-card">
+                <div class="feature-icon">⚿</div>
+                <h3>Access Control</h3>
+                <p>Granular permissions for servers, managers, and kitchen staff. Secure and track every action across locations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (Process) -->
+    <section id="how-it-works" class="container" style="background: var(--card-bg); border-radius: 24px; border: 1px solid var(--border); padding: 5rem 3rem;">
+        <h2>A Frictionless Workflow</h2>
+        <p class="section-subtitle">Optimized for speed and accuracy during peak service hours.</p>
+
+        <div class="process-container">
+            <!-- Step 1 -->
+            <div class="process-step">
+                <div class="process-text">
+                    <div class="step-indicator">Step 1</div>
+                    <h3>Scan & Browse</h3>
+                    <p>Customers scan a QR code placed on their table. The menu opens instantly on their phone with a clean interface and automatic table detection.</p>
+                </div>
+                <div class="process-image">
+                    <img src="images/WhatsApp%20Image%202026-03-30%20at%204.18.02%20PM.jpeg" alt="Mobile menu UI">
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step">
+                <div class="process-text">
+                    <div class="step-indicator">Step 2</div>
+                    <h3>Place Order</h3>
+                    <p>Customers browse items, add them to cart, and place orders directly from their phone—no waiting required.</p>
+                </div>
+                <div class="process-image">
+                    <img src="images/Screenshot%202026-03-27%20225430.png" alt="Menu ordering UI">
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step">
+                <div class="process-text">
+                    <div class="step-indicator">Step 3</div>
+                    <h3>Waiter Confirmation</h3>
+                    <p>Orders are first received by the waiter. They review and confirm the order before sending it to the kitchen, ensuring accuracy and control.</p>
+                </div>
+                <div class="process-image">
+                    <img src="images/Screenshot%202026-03-30%20145918.png" alt="Waiter dashboard confirmation">
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step">
+                <div class="process-text">
+                    <div class="step-indicator">Step 4</div>
+                    <h3>Kitchen & Table System</h3>
+                    <p>Once confirmed, orders are sent to the kitchen. Tables are tracked in real time, and each QR is linked to a specific table for seamless operations.</p>
+                </div>
+                <div class="process-image">
+                    <img src="images/Screenshot%202026-03-30%20150131.png" alt="Tables and QR system dashboard">
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="process-step">
+                <div class="process-text">
+                    <div class="step-indicator">Step 5</div>
+                    <h3>Live Tracking Experience</h3>
+                    <p>Customers can see live updates on their order—whether it's being prepared, ready, or served—creating transparency and better experience.</p>
+                </div>
+                <div class="process-image">
+                    <img src="images/Screenshot%202026-03-27%20225333.png" alt="Live order tracking concept">
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="process-step">
+                <div class="process-text">
+                    <div class="step-indicator">Step 6</div>
+                    <h3>Owner Dashboard</h3>
+                    <p>Restaurant owners get full control through a powerful dashboard—track revenue, monitor orders, analyze performance, and manage operations in real time.</p>
+                </div>
+                <div class="process-image">
+                    <img src="images/Screenshot%202026-03-27%20225405.png" alt="Executive owner dashboard">
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="process-step">
+                <div class="process-text">
+                    <div class="step-indicator">Step 7</div>
+                    <h3>Staff & Access Control</h3>
+                    <p>Control who can access what. Assign roles to staff, manage permissions, and ensure only authorized personnel can update orders or system settings.</p>
+                </div>
+                <div class="process-image">
+                    <img src="images/Screenshot%202026-03-30%20150220.png" alt="Staff access control management">
+                </div>
+            </div>
+
+            <!-- Final Section -->
+            <div class="process-final">
+                <h3>Setup Made Simple</h3>
+                <p>Restaurants share their menu with us, and we handle everything—from uploading items to generating QR codes for each table. Your system is ready within 2 days.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="container">
+        <h2>Pricing</h2>
+        <p class="section-subtitle">Simple, transparent plans for every restaurant.</p>
+        
+        <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); max-width: 900px; margin-left: auto; margin-right: auto;">
+            <div class="ui-card pricing-card">
+                <h3>Starter Plan</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; min-height: 45px;">Perfect for small restaurants and cafes getting started with digital menus.</p>
+                <div class="price">₹2,999<span style="font-size: 1rem; color: var(--text-muted); font-weight: 500; margin-left: 0.5rem;">(one-time)</span></div>
+                <a href="https://wa.me/919113960895?text=Hi%20Sapo%20Foods%2C%20I%E2%80%99m%20interested%20in%20the%20Starter%20Plan%20for%20%E2%82%B92%2C999%20one-time.%20I%20want%20a%20QR%20code%20that%20opens%20my%20PDF%20menu.%20Please%20share%20the%20next%20steps." target="_blank" class="btn-secondary w-100">Get Starter Plan</a>
+                <div style="margin-top: 1.5rem; font-size: 0.9rem; font-weight: 600; color: var(--primary);">Includes:</div>
+                <ul class="pricing-features">
+                    <li>QR code for your restaurant</li>
+                    <li>PDF menu linked to QR</li>
+                    <li>Quick setup</li>
+                    <li>Works on all smartphones</li>
+                    <li>No monthly fees</li>
+                </ul>
+                <div style="margin-top: auto; border-top: 1px solid var(--border); padding-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+                    <strong style="color: var(--primary);">Best for:</strong> Basic digital menu access
+                </div>
+            </div>
+            
+            <div class="ui-card pricing-card featured">
+                <div class="pricing-badge">Recommended</div>
+                <h3>Pro Plan</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; min-height: 45px;">A complete restaurant operating system powered by QR.</p>
+                <div class="price">₹6,999<span>/mo</span></div>
+                <a href="https://wa.me/919113960895?text=Hi%20Sapo%20Foods%2C%20I%E2%80%99m%20interested%20in%20the%20Pro%20Plan%20for%20%E2%82%B96%2C999%2Fmonth.%20I%20want%20the%20full%20system%20with%20online%20ordering%2C%20staff%20control%2C%20and%20live%20order%20tracking.%20Please%20share%20the%20next%20steps." target="_blank" class="btn-primary w-100">Get Pro Plan</a>
+                <div style="margin-top: 1.5rem; font-size: 0.9rem; font-weight: 600; color: var(--primary);">Includes everything in Starter, plus:</div>
+                <ul class="pricing-features">
+                    <li>Interactive digital menu (no PDF)</li>
+                    <li>Customers can place orders directly</li>
+                    <li>Real-time order tracking</li>
+                    <li>Table-wise QR system</li>
+                    <li>Staff management dashboard</li>
+                    <li>Live order status (preparing, ready, served)</li>
+                    <li>Revenue and performance analytics</li>
+                </ul>
+                <div style="margin-top: auto; border-top: 1px solid var(--border); padding-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+                    <strong style="color: var(--primary);">Best for:</strong> Restaurants that want full control and automation
+                </div>
+            </div>
+        </div>
+
+        <div class="ui-card" style="max-width: 900px; margin: 2rem auto 0; text-align: center; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <h3 style="margin-bottom: 0.5rem;">Need something custom?</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Contact us to build a tailored solution for your restaurant.</p>
+            <a href="#contact" class="btn-secondary">Contact Sales</a>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="cta-box">
+            <h2>Ready to streamline your operations?</h2>
+            <p class="section-subtitle" style="margin-bottom: 2.5rem;">Join hundreds of modern restaurants using Sapo Foods to increase margins and improve guest experiences.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="#contact" class="btn-primary btn-large" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); box-shadow: none;">Book a Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">
+            <div class="logo-icon" style="width:20px; height:20px; background: #94a3b8;"></div>
+            <span style="font-size: 1.25rem;">Sapo Foods</span>
+        </div>
+        <div style="color: var(--text-muted); font-size: 0.9rem;">
+            &copy; 2026 Sapo Foods, Inc. All rights reserved.
+        </div>
+        <div class="social-links">
+            <a href="#">X / Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">System Status</a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+    (function() {
+        const container = document.getElementById('qr-stand-container');
+        const canvas = document.getElementById('qrCanvas');
+        
+        // Scene setup
+        const scene = new THREE.Scene();
+        // Transparent to match the light grey CSS background
+        
+        // Camera
+        const camera = new THREE.PerspectiveCamera(35, container.clientWidth / container.clientHeight, 0.1, 1000);
+        camera.position.set(0, 3, 14);
+        
+        // Renderer
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+        // High-Res Canvas Texture Generator for the QR Stand
+        function createTexture() {
+            const texCanvas = document.createElement('canvas');
+            texCanvas.width = 1024;
+            texCanvas.height = 1380; // Stand aspect ratio
+            const ctx = texCanvas.getContext('2d');
+
+            // White base
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, 1024, 1380);
+
+            // Header Text
+            ctx.fillStyle = '#0f172a'; // Deep slate (almost black/navy)
+            ctx.font = 'bold 110px "Inter", -apple-system, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Sapo Foods', 512, 250);
+
+            // Subtext
+            ctx.fillStyle = '#475569';
+            ctx.font = '45px "Inter", -apple-system, sans-serif';
+            ctx.fillText('Scan to View Menu', 512, 340);
+
+            // QR Code Placeholder
+            const qrSize = 540;
+            const qrX = 242;
+            const qrY = 460;
+            
+            ctx.fillStyle = '#0f172a';
+            // Generate abstract realistic QR pattern
+            for(let i=0; i<20; i++) {
+                for(let j=0; j<20; j++) {
+                    if (Math.random() > 0.45) {
+                        ctx.fillRect(qrX + i*27, qrY + j*27, 27.5, 27.5);
+                    }
+                }
+            }
+            
+            // QR Position Markers
+            const drawMarker = (x, y) => {
+                ctx.fillStyle = '#ffffff'; ctx.fillRect(x-10, y-10, 128, 128);
+                ctx.fillStyle = '#0f172a'; ctx.fillRect(x, y, 108, 108);
+                ctx.fillStyle = '#ffffff'; ctx.fillRect(x+16, y+16, 76, 76);
+                ctx.fillStyle = '#0f172a'; ctx.fillRect(x+32, y+32, 44, 44);
+            }
+            drawMarker(qrX + 10, qrY + 10);
+            drawMarker(qrX + qrSize - 118, qrY + 10);
+            drawMarker(qrX + 10, qrY + qrSize - 118);
+
+            // Clean Line Elements with Orange Accent
+            ctx.fillStyle = '#f97316'; // Orange dot
+            ctx.beginPath();
+            ctx.arc(512, 1140, 18, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.strokeStyle = '#cbd5e1';
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.moveTo(310, 1140); ctx.lineTo(470, 1140);
+            ctx.moveTo(554, 1140); ctx.lineTo(714, 1140);
+            ctx.stroke();
+
+            // Bottom Navy Strip
+            ctx.fillStyle = '#1e3a8a';
+            ctx.fillRect(0, 1260, 1024, 120);
+
+            const tex = new THREE.CanvasTexture(texCanvas);
+            tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+            return tex;
+        }
+
+        const standTexture = createTexture();
+
+        // Group for the entire table stand
+        const standGroup = new THREE.Group();
+        scene.add(standGroup);
+
+        // Dimensions for realistically proportioned A-frame stand
+        const width = 3.2;
+        const height = 4.4;
+        const thick = 0.06;
+        const spread = 1.25; // Base spread half-depth
+
+        // Create the geometry
+        const boxGeo = new THREE.BoxGeometry(width, height, thick);
+        
+        // Blank smooth cardboard material for inside and sides
+        const baseMat = new THREE.MeshStandardMaterial({ 
+            color: 0xffffff,
+            roughness: 0.8,
+            metalness: 0.1
+        });
+
+        // Textured premium material for the faces
+        const texMat = new THREE.MeshStandardMaterial({
+            map: standTexture,
+            roughness: 0.8,
+            metalness: 0.1
+        });
+
+        // Apply materials [right, left, top, bottom, front, back]
+        const materials = [baseMat, baseMat, baseMat, baseMat, texMat, baseMat];
+
+        // Front Fold
+        const frontMesh = new THREE.Mesh(boxGeo, materials);
+        frontMesh.position.set(0, -height/2, 0); // Pivot at the topmost edge
+        frontMesh.castShadow = true;
+        frontMesh.receiveShadow = true;
+        
+        const frontPivot = new THREE.Group();
+        frontPivot.position.set(0, height, 0); // Apex point
+        frontPivot.add(frontMesh);
+        frontPivot.rotation.x = Math.asin(spread / height);
+        standGroup.add(frontPivot);
+
+        // Back Fold
+        const backMesh = new THREE.Mesh(boxGeo, materials);
+        backMesh.position.set(0, -height/2, 0);
+        backMesh.castShadow = true;
+        backMesh.receiveShadow = true;
+
+        const backPivot = new THREE.Group();
+        backPivot.position.set(0, height, 0);
+        backPivot.add(backMesh);
+        backPivot.rotation.y = Math.PI; // Spin backwards
+        backPivot.rotation.x = Math.asin(spread / height); // Tilt outwards
+        standGroup.add(backPivot);
+
+        // Center stand perfectly
+        standGroup.position.y = - height/2 + 0.3;
+
+        // Cinematic Dark/Orange Studio Lighting
+        const ambientLight = new THREE.AmbientLight(0x0b1120, 1.5); // Deep blue ambient
+        scene.add(ambientLight);
+
+        const mainLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        mainLight.position.set(5, 10, 8);
+        mainLight.castShadow = true;
+        mainLight.shadow.mapSize.width = 2048;
+        mainLight.shadow.mapSize.height = 2048;
+        mainLight.shadow.camera.near = 0.5;
+        mainLight.shadow.camera.far = 25;
+        mainLight.shadow.bias = -0.001;
+        scene.add(mainLight);
+
+        const rimLight = new THREE.DirectionalLight(0xff8c00, 2.5); // Intense Orange Rim Light
+        rimLight.position.set(-10, 5, -8);
+        scene.add(rimLight);
+
+        const frontFillLight = new THREE.DirectionalLight(0x60a5fa, 0.5); // Subtle blue fill light
+        frontFillLight.position.set(0, -2, 10);
+        scene.add(frontFillLight);
+
+        // Subtle Ground Shadow (darker for the dark theme visibility)
+        const planeGeo = new THREE.PlaneGeometry(100, 100);
+        const shadowMat = new THREE.ShadowMaterial({ opacity: 0.4 });
+        const ground = new THREE.Mesh(planeGeo, shadowMat);
+        ground.rotation.x = -Math.PI / 2;
+        ground.position.y = standGroup.position.y;
+        ground.receiveShadow = true;
+        scene.add(ground);
+
+        // Smooth Interaction State
+        let targetRotationSpeed = 0.004;
+        let currentRotationSpeed = 0.004;
+        let targetScale = 1;
+        let currentScale = 1;
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            // Eased continuous rotation
+            currentRotationSpeed += (targetRotationSpeed - currentRotationSpeed) * 0.05;
+            standGroup.rotation.y -= currentRotationSpeed; // Clockwise
+            
+            // Eased Scaling
+            currentScale += (targetScale - currentScale) * 0.1;
+            standGroup.scale.setScalar(currentScale);
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Mouse Interactions
+        container.addEventListener('mouseenter', () => {
+            targetScale = 1.04;
+            targetRotationSpeed = 0.001; // Slow down when inspecting
+            shadowMat.opacity = 0.6;    // Darken shadow on hover for depth
+        });
+
+        container.addEventListener('mouseleave', () => {
+            targetScale = 1.0;
+            targetRotationSpeed = 0.004;
+            shadowMat.opacity = 0.4;
+        });
+
+        container.addEventListener('click', () => {
+            currentScale = 0.96; // Physical click down sensation
+        });
+
+        // Resize Handler
+        window.addEventListener('resize', () => {
+            if(!container) return;
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        });
+    })();
+    </script>
+</body>
+</html>
